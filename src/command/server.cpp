@@ -1040,7 +1040,7 @@ namespace ardb
         {
             buffer.Printf("[%s lua] ", ns.AsString().c_str());
         }
-        else
+        else if (ctx.client)
         {
             std::string addr;
             ctx.client->client->GetRemoteAddress()->ToString(addr);
